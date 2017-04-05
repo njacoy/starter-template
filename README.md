@@ -15,7 +15,7 @@ A simple template for building a site from scratch using React and Webpack.
 		background: url('~assets/image.jpg');
 	}
 
-### Fonts
+### Font usage
 	@font-face {
 	    font-family: 'font';
 	    src: url('/assets/fonts/(...)/font.woff2') format('woff2'),
