@@ -1,0 +1,50 @@
+$max-width: 1150px;
+
+.section {
+  @include standard-index;
+
+  .section-wrapper {
+    width: 90%;
+    max-width: $max-width;
+    overflow: hidden;
+    @include center-block-element;
+    @include standard-index;
+    @include clear;
+
+    $viewport-name: large;
+
+    @mixin column-widths {
+      @for $i from 1 through 12 {
+        .#{$viewport-name}-#{$i} {
+          width: $i * 8.33333333%;
+        }
+      }
+    }
+
+    @include column-widths;
+
+    @include viewport(medium) {
+      $viewport-name: medium;
+      @include column-widths;
+    }
+
+    @include viewport(small) {
+      $viewport-name: small;
+      @include column-widths;
+    }
+
+    &:after {
+      clear: both;
+    }
+  }
+}
+
+.row {
+      @include standard-index;
+      @include clear;
+}
+
+.column {
+  @include standard-index;
+  float: left;
+}

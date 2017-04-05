@@ -1,0 +1,63 @@
+//
+// CLEAR
+//
+
+@mixin clear {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin standard-index {
+	position: relative;
+	z-index: 1;
+}
+
+//
+// CENTERING ELEMENTS
+//
+
+@mixin center-block-element {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin center-element {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin center-element-h {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin center-element-v {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin vertical-align {
+	float: none;
+	display: inline-block;
+	vertical-align: middle;
+
+	@include viewport(small) {
+		float: left;
+		display: block;
+		vertical-align: inherit;
+
+	}
+}
+
+
