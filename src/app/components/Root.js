@@ -7,9 +7,7 @@ export class Root extends React.Component {
         return (
             <section className="section">
                 <div className="section-wrapper">
-                    <div className="row">
-                        <Header />
-                    </div>
+                    <Header />
                 </div>
                 <hr/>
                 {this.props.children}

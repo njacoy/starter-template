@@ -14,3 +14,12 @@ A simple template for building a site from scratch using React and Webpack.
 	body {
 		background: url('~assets/image.jpg');
 	}
+
+### Fonts
+	@font-face {
+	    font-family: 'font';
+	    src: url('/assets/fonts/(...)/font.woff2') format('woff2'),
+	         url('/assets/fonts/(...)/font.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	}
